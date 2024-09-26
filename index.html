@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beeper Management System</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Beeper Management System</h1>
+        <div id="map-container">
+            <h2>Beeper Map</h2>
+            <div id="map"></div>
+        </div>
+        <div id="beeper-list">
+            <h2>Beeper List</h2>
+            <ul id="beepers"></ul>
+        </div>
+        <div id="beeper-form">
+            <h2>Add New Beeper</h2>
+            <form id="add-beeper-form">
+                <label for="status">Status:</label>
+                <select id="status" name="status">
+                    <option value="produced">Produced</option>
+                    <option value="explosives_added">Explosives Added</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="deployed">Deployed</option>
+                </select>
+                <button type="submit">Add Beeper</button>
+            </form>
+        </div>
+    </div>
+    <div id="updateModal" class="modal">
+        <div class="modal-content">
+            <h2>Update Beeper Status</h2>
+            <select id="statusSelect"></select>
+            <button id="confirmUpdate">Update</button>
+            <button id="cancelUpdate">Cancel</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
